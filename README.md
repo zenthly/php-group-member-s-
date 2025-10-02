@@ -36,6 +36,18 @@ This project consists of various PHP files, each with its own functionality. Her
 
 Created by Zenthly.
 
+
+## Collaborators
+
+- Obed
+- Jaxby
+- Kelly
+- Ritha
+- Dacia
+- Celia
+- Ketia
+- Delicia
+
 ## License
 
 MIT License.
