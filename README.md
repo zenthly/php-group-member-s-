@@ -1,83 +1,41 @@
-# PHP Group Members
 
-Welcome to **PHP Group Members** – a clean and modern solution for managing group members using PHP!
+# PHP Group Members Project
 
----
+This project consists of various PHP files, each with its own functionality. Here is a simple explanation for each part:
 
-## 🚀 What is this project?
+## Folders and Files
 
-PHP Group Members is a simple, smart web app built with PHP, made to help you organize, display, and manage group members. Ideal for student groups, clubs, or any organization needing to keep track of its people.
+- `config/` : Contains the database configuration (like `db.php`).
+- `database/` : Contains the SQL file (`member_db.sql`) used to create the database.
+- `public/` : Contains the main website files (like `index.php`, `add_member.php`).
+- `assets/` : Contains styles and logo (`style.css`, `logo.png`).
+- `README.md` : General information about the project.
 
----
+## PHP Files
 
-## 🌟 Features
+- `Simple Calculator.php` : A program for basic arithmetic (addition, subtraction, multiplication, division).
+- `Employee Bonus Calculator.php` : Calculates employee bonus based on salary and other info.
+- `Grade Point Calculator.php` : Calculates GPA or grade point.
+- `Insurance Premium Calculator.php` : Calculates insurance premium amount.
+- `Login Authentication System.php` : Handles user login authentication.
+- `Number Properties Analyzer.php` : Analyzes number properties (like checking if a number is prime, even, odd, etc).
+- `Shopping Discount Calculator.php` : Calculates discounts on shopping items.
+- `Temperature Converter.php` : Converts temperature between Celsius, Fahrenheit, and others.
+- `form.php` : Handles user input forms.
+- `styles.css` : Website styling.
+- `ritha.html` : An HTML page that may display information or an interface.
 
-- 🗂️ Add, edit, and remove members easily
-- 👤 Search and filter members
-- 📋 Display member lists with a beautiful interface
-- 🔒 Secure data storage
+## How to Use
 
----
+1. Place the project in XAMPP or another PHP server.
+2. Import the database using `member_db.sql`.
+3. Edit the database configuration in `config/db.php` if needed.
+4. Start the PHP server and open the project in your browser using `localhost`.
 
-## 🛠️ Tech Stack
+## Credits
 
-- **Backend:** PHP
-- **Database:** MySQL
-- **Frontend:** HTML, CSS, Bootstrap
+Created by Zenthly.
 
----
+## License
 
-## 📝 Installation
-
-1. Clone this repository:
-    ```bash
-    git clone https://github.com/zenthly/php-group-member-s-.git
-    ```
-2. Import the database (see `/database/member_db.sql`)
-3. Configure your database settings in `/config/db.php`
-4. Run locally with a PHP server:
-    ```bash
-    php -S localhost:8000
-    ```
-5. Open `http://localhost:8000` in your browser
-
----
-
-## 📸 Screenshots
-
-_Add your screenshots here!_
-
----
-
-## 📂 Project Structure
-
-```
-php-group-member-s-/
-│
-├── config/
-│   └── db.php
-├── database/
-│   └── member_db.sql
-├── public/
-│   ├── index.php
-│   └── add_member.php
-├── assets/
-│   ├── style.css
-│   └── logo.png
-└── README.md
-```
-
----
-
-## 🤝 Credits
-
-Project by [Zenthly](https://github.com/zenthly)
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
+MIT License.
