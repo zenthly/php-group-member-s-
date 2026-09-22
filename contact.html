@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Beer Delivery</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat fixed;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 70px;
+            background: rgba(20, 20, 20, 0.9);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #f7c948;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #f7c948;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 60px auto;
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .contact-info {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 35px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .contact-info h1 {
+            font-size: 42px;
+            margin-top: 0;
+            color: #f7c948;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #f4f4f4;
+        }
+
+        .call-box {
+            background: #f7c948;
+            color: #111;
+            padding: 18px 22px;
+            border-radius: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .form-box {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            padding: 35px;
+            border-radius: 20px;
+        }
+
+        .form-box h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #f7c948;
+            font-size: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 14px 15px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        button {
+            background: #f7c948;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #111;
+        }
+
+        button:hover {
+            background: #ffd766;
+        }
+
+        /* User Info Bar */
+        .user-info-bar {
+            background: rgba(247, 201, 72, 0.15);
+            border-bottom: 2px solid #f7c948;
+            padding: 15px 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            display: none;
+        }
+
+        .user-info-bar.show {
+            display: flex;
+        }
+
+        .user-info-left {
+            color: #f0f0f0;
+        }
+
+        .user-welcome {
+            color: #f7c948;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .user-info-right {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .logout-link {
+            color: #ff6b6b;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .logout-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 760px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .user-info-bar {
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px 20px;
+            }
+
+            .user-info-right {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+
+            .container {
+                grid-template-columns: 1fr;
+                margin-top: 40px;
+            }
+        
+    </style>
+</head>
+<body>
+
+<!-- User Info Bar -->
+<div class="user-info-bar" id="userInfoBar">
+    <div class="user-info-left">
+        <span class="user-welcome">👤 Logged in as: <span id="contactPageUserName">User</span></span>
+    </div>
+    <div class="user-info-right">
+        <a href="profile.html" style="color: #f7c948; text-decoration: none;">View Profile</a>
+        <a class="logout-link" id="contactPageLogout">Logout</a>
+    </div>
+</div>
+
+<nav>
+    <div class="logo">🍺 Beer Delivery</div>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="contact-info">
+        <h1>Contact Us</h1>
+        <p>We are always ready to help you choose the best beer and spirit for your taste.</p>
+        <p>Email: beer@gmail.com</p>
+        <p>Phone: +250 796594007</p>
+        <p>Location: Kigali, Rwanda</p>
+
+        <div class="call-box">Call us anytime for fast assistance and delivery updates.</div>
+    </div>
+
+    <div class="form-box">
+        <h2>Send a Message</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="text" id="phone" placeholder="Your Phone Number" required>
+            <textarea id="message" placeholder="Write your message here..."></textarea>
+            <button type="submit">Send Message</button>
+            <div id="contactMessage" style="text-align: center; min-height: 20px; font-weight: bold; margin-top: 10px;"></div>
+        </form>
+    </div>
+
+</div>
+
+</body>
+<script>
+    // Check user login status
+    function checkUserStatus() {
+        const currentUser = sessionStorage.getItem("currentUser");
+        const userInfoBar = document.getElementById("userInfoBar");
+
+        if (currentUser) {
+            const user = JSON.parse(currentUser);
+            document.getElementById("contactPageUserName").textContent = user.name || user.username;
+            userInfoBar.classList.add("show");
+
+            // Logout handler
+            document.getElementById("contactPageLogout").addEventListener("click", function(e) {
+                e.preventDefault();
+                if (confirm("Are you sure you want to logout?")) {
+                    const user = JSON.parse(sessionStorage.getItem("currentUser"));
+                    
+                    // Record logout in database
+                    fetch('logout.php', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ user_id: user.id })
+                    }).then(r => r.json()).catch(e => {
+                        console.log("Logout recording failed:", e);
+                    });
+                    
+                    sessionStorage.removeItem("currentUser");
+                    localStorage.removeItem("rememberUser");
+                    alert("You have been logged out successfully!");
+                    window.location.href = "home.html";
+                }
+            });
+        } else {
+            userInfoBar.classList.remove("show");
+        }
+    }
+
+    // Handle contact form submission
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const message = document.getElementById('message').value.trim();
+        const messageEl = document.getElementById('contactMessage');
+
+        if (!name || !email || !phone || !message) {
+            messageEl.textContent = '⚠️ Please fill all required fields';
+            messageEl.style.color = '#ff6b6b';
+            return;
+        }
+
+        try {
+            messageEl.textContent = '⏳ Sending message...';
+            messageEl.style.color = '#ffdf80';
+
+            const response = await fetch('contact_handler.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name, email, phone, message
+                })
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                messageEl.innerHTML = `
+                    <div style="color: #90ee90; padding: 15px; background: rgba(144, 238, 144, 0.1); border-radius: 8px;">
+                        ✓ ${data.message}
+                    </div>
+                `;
+                
+                // Clear form
+                document.getElementById('contactForm').reset();
+                
+                // Scroll to message
+                messageEl.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                messageEl.textContent = '❌ ' + data.message;
+                messageEl.style.color = '#ff6b6b';
+            }
+        } catch (error) {
+            messageEl.textContent = '❌ Error: ' + error.message;
+            messageEl.style.color = '#ff6b6b';
+        }
+    });
+
+    // Check user status on page load
+    document.addEventListener("DOMContentLoaded", checkUserStatus);
+</script>
